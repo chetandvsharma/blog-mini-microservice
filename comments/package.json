@@ -1,0 +1,17 @@
+{
+  "name": "comments",
+  "version": "1.0.0",
+  "description": "comments services for blog mini microservice app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "chetan sharma",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
