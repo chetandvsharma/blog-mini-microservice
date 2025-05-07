@@ -8,19 +8,29 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const posts = {};
+let posts = {};
 
-app.get("/posts", async (req, res) => {});
+app.get("/posts", async (req, res) => {
+  res.send(posts)
+});
+
 app.post("/events", async (req, res) => {
   const { type, data } = req.body;
 
-  if (type = 'PostCreated') {
-    const {id, title} = data;
+  if ((type == "PostCreated")) {
+    const { id, title } = data;
 
-    posts[]
-  } else if (type = 'CommentCreated') {
-
+    posts[id] = { id, title, comment: [] };
   }
+
+  if ((type == "CommentCreated")) {
+    const { id, content, postId } = data;
+
+    const post = posts[postId];
+    post.comment.push({ id, content });
+  }
+  console.log(posts)
+  res.send({});
 });
 
 app.listen(4002, () => {
