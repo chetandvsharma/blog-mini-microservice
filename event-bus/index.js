@@ -9,6 +9,9 @@ app.use(bodyParser.json());
 // Open-source project for prod
 
 const events = req.body;
+const handleEvent = (event, data) => {
+  
+}
 
 app.post("/events", (req, res) => {
   const event = req.body;
