@@ -5,8 +5,15 @@ const axios = require("axios");
 const app = express();
 app.use(bodyParser.json());
 
+// Home grown version of Event Bus Data Store
+// Open-source project for prod
+
+const events = req.body;
+
 app.post("/events", (req, res) => {
   const event = req.body;
+
+  events.push(event);
 
   axios.post("http://localhost:4000/events", event).catch((err) => {
     console.log(err.message);
@@ -21,6 +28,10 @@ app.post("/events", (req, res) => {
     console.log(err.message);
   });
   res.send({ status: "OK" });
+});
+
+app.get("/events", (req, res) => {
+  res.send(events);
 });
 
 app.listen(4005, () => {
