@@ -4,7 +4,8 @@
   "description": "posts services for blog mini microservice app",
   "main": "index.js",
   "scripts": {
-   "dev": "nodemon index.js"
+   "dev": "nodemon index.js",
+   "start": "nodemon index.js"
   },
   "author": "chetan sharma",
   "license": "ISC",
