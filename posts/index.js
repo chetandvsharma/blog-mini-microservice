@@ -41,5 +41,6 @@ app.post("/events", (req, res) => {
 });
 
 app.listen(4000, () => {
+  console.log('updated to version 6 on june 29')
   console.info("server running on port ", 4000);
 });
