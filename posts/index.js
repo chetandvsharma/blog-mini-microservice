@@ -40,7 +40,11 @@ app.post("/events", (req, res) => {
   res.send({});
 });
 
+app.get("/get", (req,res) => {
+  res.send("Hello from Sirius Black !!!")
+})
+
 app.listen(4000, () => {
-  console.log('updated to version 6 on june 29')
+  console.log('updated to version 7 on july 15')
   console.info("server running on port ", 4000);
 });
