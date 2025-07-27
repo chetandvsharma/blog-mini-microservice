@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: posts
   template:
-    metadata:
+    metadata:    
       labels:
         app: posts
     spec:
